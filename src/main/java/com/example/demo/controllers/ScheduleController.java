@@ -18,7 +18,7 @@ public class ScheduleController {
     @GetMapping("/schedule/{id}")
     public Schedule getSchedule(@PathVariable("id") String id) {return scheduleService.get(id); }
     @PostMapping("/schedule-create")
-    public Schedule save(Schedule schedule) {return scheduleService.save(schedule);}
-    @GetMapping("/schedules-all")
+    public Schedule createSchedule(Schedule schedule) {return scheduleService.save(schedule);}
+    @GetMapping("/schedule-all")
     public List<Schedule> getSchedules() {return scheduleService.findAll();}
 }
