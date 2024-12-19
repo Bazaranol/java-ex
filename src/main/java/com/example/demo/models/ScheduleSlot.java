@@ -1,8 +1,9 @@
 package com.example.demo.models;
 
-import com.example.demo.models.enums.*;
-import jakarta.persistence.*;
 import lombok.*;
+import jakarta.persistence.*;
+
+import java.time.OffsetTime;
 
 @Entity
 @Getter
@@ -10,18 +11,16 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-@Table(name = "employees")
-public class Employee {
+@Table(name = "schedule_slots")
+public class ScheduleSlot {
     @Id
     @Generated
     private String id;
 
     @Column
-    private String employeeName;
-
+    private String scheduleTemplateId;
     @Column
-    private Status status;
-
+    private OffsetTime beginTime;
     @Column
-    private Position position;
+    private OffsetTime endTime;
 }
