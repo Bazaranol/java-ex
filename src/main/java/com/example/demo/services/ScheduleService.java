@@ -14,7 +14,7 @@ import java.util.List;
 public class ScheduleService {
     private final ScheduleRepository scheduleRepository;
 
-    public Schedule save(Schedule schedule) { return this.scheduleRepository.save(schedule); }
+    public Schedule save(Schedule schedule) { return scheduleRepository.save(schedule); }
 
     public List<Schedule> findAll() { return scheduleRepository.findAll(); }
 
