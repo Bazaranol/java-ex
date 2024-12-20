@@ -17,8 +17,11 @@ public class SchedulePeriod {
     @Column
     private String id;
 
-    @Column
-    private String slotId;
+//    @Column
+//    private String slotId;
+    @ManyToOne
+    @JoinColumn(name = "slot_id")
+    private ScheduleSlot slot;
 
     @Column
     private String scheduleId;
